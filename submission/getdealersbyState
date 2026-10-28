@@ -1,0 +1,52 @@
+$ curl -s "http://127.0.0.1:8000/djangoapp/get_dealers/Kansas" | python -m json.tool
+
+{
+    "status": 200,
+    "dealers": [
+        {
+            "id": 3,
+            "full_name": "Cars Dealership - Kansas City",
+            "short_name": "Kansas City",
+            "address": "9500 State Avenue",
+            "city": "Kansas City",
+            "state": "Kansas",
+            "st": "KS",
+            "zip": "66111",
+            "st_zip": "KS 66111",
+            "lat": 39.1303,
+            "long": -94.7911,
+            "latitude": 39.1303,
+            "longitude": -94.7911
+        },
+        {
+            "id": 2,
+            "full_name": "Cars Dealership - Overland Park",
+            "short_name": "Overland Park",
+            "address": "7800 Metcalf Avenue",
+            "city": "Overland Park",
+            "state": "Kansas",
+            "st": "KS",
+            "zip": "66204",
+            "st_zip": "KS 66204",
+            "lat": 38.9839,
+            "long": -94.6677,
+            "latitude": 38.9839,
+            "longitude": -94.6677
+        },
+        {
+            "id": 1,
+            "full_name": "Cars Dealership - Wichita",
+            "short_name": "Wichita",
+            "address": "5150 N Webb Road",
+            "city": "Wichita",
+            "state": "Kansas",
+            "st": "KS",
+            "zip": "67208",
+            "st_zip": "KS 67208",
+            "lat": 37.7234,
+            "long": -97.2425,
+            "latitude": 37.7234,
+            "longitude": -97.2425
+        }
+    ]
+}

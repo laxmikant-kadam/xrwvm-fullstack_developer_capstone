@@ -1,0 +1,43 @@
+﻿TASK 2 - django_server
+======================
+Terminal output of the Django development server that powers the Cars Dealership
+application, including the exact command line used to start it and the live request
+log written while the local screenshots were captured.
+
+Environment
+-----------
+  OS                : Windows 11 (win32)
+  Python            : 3.10.8
+  Django            : 5.2.6
+  Django REST FW    : 3.16.1
+  Flask (sentiment) : 3.1.2  (separate micro-service, port 5050)
+  Node.js           : v22.19.0 (React source in server/frontend)
+  Database          : SQLite (db.sqlite3, created by `python manage.py migrate`)
+  Working directory : D:\Projects\CarDealership
+
+Command used to start the server
+--------------------------------
+  python manage.py migrate            # create the schema
+  python manage.py seed_db            # load 12 dealers, 12 makes, 50 models, 12 reviews
+  python manage.py runserver 127.0.0.1:8000 --noreload
+
+  (the sentiment micro-service runs next to it:
+   python sentiment_analyzer/app.py  ->  http://localhost:5050/analyze)
+
+Server console output (logs/django.log)
+---------------------------------------
+Performing system checks...
+
+System check identified no issues (0 silenced).
+October 28, 2026 - 22:02:45
+Django version 5.2.6, using settings 'djangoproj.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/5.2/howto/deployment/
+[28/Oct/2026 22:02:52] "GET / HTTP/1.1" 200 12558
+[28/Oct/2026 22:02:52] "GET /djangoapp/get_dealers HTTP/1.1" 200 3138
+[28/Oct/2026 22:02:52] "GET /?state=Kansas HTTP/1.1" 200 12558
+[28/Oct/2026 22:02:52] "GET /dealer/1/ HTTP/1.1" 200 7258
+[28/Oct/2026 22:02:52] "GET /admin/login/ HTTP/1.1" 200 4165

@@ -1,0 +1,146 @@
+TASK 23 - CICD (GitHub Actions)
+=================================
+
+Pipeline definition : .github/workflows/ci.yml
+Repository          : https://github.com/laxmikant-kadam/cars-dealership-capstone
+Workflow            : Cars Dealership CI/CD (.github/workflows/ci.yml)
+Run number          : #2  (run id 40726972265)
+Trigger             : push
+Branch              : main
+Commit              : 17852434fac93e447a697cdeb75bee584440f11c  "Fix React build CSS import, admin logout confirmation page, add screenshot tooling"
+Started / finished  : 2026-10-28T16:32:32Z -> 2026-10-28T16:33:30Z
+Result              : completed / SUCCESS
+Run URL             : https://github.com/laxmikant-kadam/cars-dealership-capstone/actions/runs/40726972265
+
+Pipeline stages
+---------------
+  [success] Django API tests  (2026-10-28T16:32:34Z -> 2026-10-28T16:32:57Z)
+        -  1. Set up job                               success
+        -  2. Checkout repository                      success
+        -  3. Set up Python 3.10                       success
+        -  4. Install Python dependencies              success
+        -  5. Django system checks                     success
+        -  6. Apply database migrations                success
+        -  7. Load dealership seed data                success
+        -  8. Run Django test suite                    success
+        - 15. Post Set up Python 3.10                  success
+        - 16. Post Checkout repository                 success
+        - 17. Complete job                             success
+  [success] Sentiment analyser tests  (2026-10-28T16:32:35Z -> 2026-10-28T16:32:56Z)
+        -  1. Set up job                               success
+        -  2. Checkout repository                      success
+        -  3. Set up Python 3.10                       success
+        -  4. Install sentiment service dependencies   success
+        -  5. Run analyser unit tests                  success
+        -  6. Smoke test the Flask endpoint            success
+        - 11. Post Set up Python 3.10                  success
+        - 12. Post Checkout repository                 success
+        - 13. Complete job                             success
+  [success] React production build  (2026-10-28T16:32:34Z -> 2026-10-28T16:33:10Z)
+        -  1. Set up job                               success
+        -  2. Checkout repository                      success
+        -  3. Set up Node.js 20                        success
+        -  4. Install npm dependencies                 success
+        -  5. Build the React application              success
+        -  6. Upload build artefact                    success
+        - 11. Post Set up Node.js 20                   success
+        - 12. Post Checkout repository                 success
+        - 13. Complete job                             success
+  [success] Build deployment images  (2026-10-28T16:32:59Z -> 2026-10-28T16:33:30Z)
+        -  1. Set up job                               success
+        -  2. Checkout repository                      success
+        -  3. Build Django image                       success
+        -  4. Build sentiment analyser image           success
+        -  5. Verify images                            success
+        - 10. Post Checkout repository                 success
+        - 11. Complete job                             success
+
+Job logs (trimmed to the build/test summary lines)
+--------------------------------------------------
+
+### Django API tests  ->  SUCCESS
+    https://github.com/laxmikant-kadam/cars-dealership-capstone/actions/runs/40726972265/job/122952742361
+
+    ##[group]Run actions/checkout@v4
+    ##[group]Run actions/setup-python@v5
+    Successfully uninstalled pip-23.0.1
+    Successfully installed pip-26.2.2
+    Successfully set up CPython (3.10.22)
+    ##[group]Run python -m pip install --upgrade pip
+    Successfully installed Django-5.2.6 Flask-3.1.2 asgiref-3.12.1 blinker-1.9.0 certifi-2026.10.23 charset_normalizer-3.5.2 click-8.5.0 django-cors-headers-4.9.0 djangorestframework-3.16.1 gunicorn-23.0.0 idna-3.20 itsdangerous-2.2.0 jinja2-3.1.6 markupsafe-3.0.4 packaging-26.3 requests-2.32.5 sqlparse-0.6.0 typing_extensions-4.16.0 urllib3-2.8.0 werkzeug-3.1.9 whitenoise-6.7.0
+    ##[group]Run python manage.py check
+    ##[group]Run python manage.py migrate
+    ##[group]Run python manage.py seed_db
+    ##[group]Run python manage.py test --verbosity 2
+    python manage.py test --verbosity 2
+    Found 17 test(s).
+    Ran 17 tests in 0.949s
+    OK
+
+### Sentiment analyser tests  ->  SUCCESS
+    https://github.com/laxmikant-kadam/cars-dealership-capstone/actions/runs/40726972265/job/122952742909
+
+    ##[group]Run actions/checkout@v4
+    ##[group]Run actions/setup-python@v5
+    Successfully set up CPython (3.10.22)
+    ##[group]Run python -m pip install --upgrade pip
+          Successfully uninstalled pip-26.2.1
+    Successfully installed pip-26.2.2
+    Successfully installed Flask-3.1.2 blinker-1.9.0 certifi-2026.10.23 charset_normalizer-3.5.2 click-8.5.0 gunicorn-23.0.0 idna-3.20 itsdangerous-2.2.0 jinja2-3.1.6 markupsafe-3.0.4 packaging-26.3 requests-2.32.5 urllib3-2.8.0 werkzeug-3.1.9
+    ##[group]Run python -m unittest discover -s sentiment_analyzer/tests -v
+    Ran 5 tests in 0.001s
+    OK
+    ##[group]Run python sentiment_analyzer/app.py &
+
+### React production build  ->  SUCCESS
+    https://github.com/laxmikant-kadam/cars-dealership-capstone/actions/runs/40726972265/job/122952743023
+
+    ##[group]Run actions/checkout@v4
+    ##[group]Run actions/setup-node@v4
+    ##[group]Run npm install --no-audit --no-fund
+    ##[group]Run npm run build
+    npm run build
+    Creating an optimized production build...
+    Compiled successfully.
+    File sizes after gzip:
+      77.79 kB  build/static/js/main.0ff7d0df.js
+      37.15 kB  build/static/css/main.4b093ff3.css
+    The project was built assuming it is hosted at /.
+    ##[group]Run actions/upload-artifact@v4
+
+### Build deployment images  ->  SUCCESS
+    https://github.com/laxmikant-kadam/cars-dealership-capstone/actions/runs/40726972265/job/122952980570
+
+    ##[group]Run actions/checkout@v4
+    ##[group]Run docker build -t cars-dealership:17852434fac93e447a697cdeb75bee584440f11c .
+    #1 DONE 0.0s
+    #2 DONE 0.0s
+    #3 DONE 0.5s
+    #4 DONE 0.0s
+    #6 DONE 0.1s
+    #5 DONE 2.0s
+    #7 DONE 0.0s
+    #8 2.012 Building dependency tree...
+    #8 DONE 3.8s
+    #9 DONE 0.0s
+    #10 5.750 Successfully installed Django-5.2.6 Flask-3.1.2 asgiref-3.12.1 blinker-1.9.0 certifi-2026.10.23 charset_normalizer-3.5.2 click-8.5.0 django-cors-headers-4.9.0 djangorestframework-3.16.1 gunicorn-23.0.0 idna-3.20 itsdangerous-2.2.0 jinja2-3.1.6 markupsafe-3.0.4 requests-2.32.5 sqlparse-0.6.0 typing_extensions-4.16.0 urllib3-2.8.0 werkzeug-3.1.9 whitenoise-6.7.0
+    #10 DONE 6.1s
+    #11 DONE 0.0s
+    #12 DONE 0.9s
+    #13 writing image sha256:f4ec0ef90be933e4343de31e6a173e795c7f0b575265bfffab86bae580b0ff52 done
+    #13 naming to docker.io/library/cars-dealership:17852434fac93e447a697cdeb75bee584440f11c done
+    #13 DONE 1.5s
+    ##[group]Run docker build -t cars-dealership-sentiment:17852434fac93e447a697cdeb75bee584440f11c ./sentiment_analyzer
+    #1 DONE 0.0s
+    #2 DONE 0.1s
+    #3 DONE 0.0s
+    #4 DONE 0.0s
+    #6 DONE 0.0s
+    #7 DONE 0.0s
+    #8 3.138 Successfully installed Flask-3.1.2 blinker-1.9.0 certifi-2026.10.23 charset_normalizer-3.5.2 click-8.5.0 gunicorn-23.0.0 idna-3.20 itsdangerous-2.2.0 jinja2-3.1.6 markupsafe-3.0.4 requests-2.32.5 urllib3-2.8.0 werkzeug-3.1.9
+    #8 DONE 3.4s
+    #9 DONE 0.0s
+    #10 writing image sha256:cf62840818c49a0b3357368bf80bbcd4b8eaf5b9c643bf3c77ff5601f0e1cf18 done
+    #10 naming to docker.io/library/cars-dealership-sentiment:17852434fac93e447a697cdeb75bee584440f11c done
+    #10 DONE 0.4s
+    ##[group]Run docker images

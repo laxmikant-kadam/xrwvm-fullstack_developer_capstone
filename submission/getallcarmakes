@@ -1,0 +1,391 @@
+$ curl -s "http://127.0.0.1:8000/djangoapp/get_cars" | python -m json.tool
+
+{
+    "status": 200,
+    "car_makes": [
+        {
+            "id": 5,
+            "name": "Audi",
+            "description": "German premium brand known for quattro all-wheel drive and refined interiors.",
+            "models": [
+                {
+                    "id": 141,
+                    "name": "A4",
+                    "type": "SEDAN",
+                    "year": 2024
+                },
+                {
+                    "id": 142,
+                    "name": "A6",
+                    "type": "SEDAN",
+                    "year": 2023
+                },
+                {
+                    "id": 143,
+                    "name": "Q5",
+                    "type": "SUV",
+                    "year": 2024
+                },
+                {
+                    "id": 144,
+                    "name": "Q7",
+                    "type": "SUV",
+                    "year": 2023
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "name": "BMW",
+            "description": "German premium brand focused on driving dynamics and technology.",
+            "models": [
+                {
+                    "id": 136,
+                    "name": "3 Series",
+                    "type": "SEDAN",
+                    "year": 2024
+                },
+                {
+                    "id": 137,
+                    "name": "5 Series",
+                    "type": "SEDAN",
+                    "year": 2024
+                },
+                {
+                    "id": 138,
+                    "name": "X3",
+                    "type": "SUV",
+                    "year": 2024
+                },
+                {
+                    "id": 139,
+                    "name": "X5",
+                    "type": "SUV",
+                    "year": 2023
+                },
+                {
+                    "id": 140,
+                    "name": "i4",
+                    "type": "SEDAN",
+                    "year": 2024
+                }
+            ]
+        },
+        {
+            "id": 7,
+            "name": "Chevrolet",
+            "description": "American brand offering everything from compact cars to full-size trucks.",
+            "models": [
+                {
+                    "id": 152,
+                    "name": "Corvette",
+                    "type": "COUPE",
+                    "year": 2024
+                },
+                {
+                    "id": 150,
+                    "name": "Equinox",
+                    "type": "SUV",
+                    "year": 2024
+                },
+                {
+                    "id": 149,
+                    "name": "Malibu",
+                    "type": "SEDAN",
+                    "year": 2024
+                },
+                {
+                    "id": 151,
+                    "name": "Silverado",
+                    "type": "TRUCK",
+                    "year": 2024
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "name": "Ford",
+            "description": "American manufacturer famous for trucks, SUVs and the Mustang.",
+            "models": [
+                {
+                    "id": 133,
+                    "name": "Escape",
+                    "type": "SUV",
+                    "year": 2024
+                },
+                {
+                    "id": 134,
+                    "name": "Explorer",
+                    "type": "SUV",
+                    "year": 2023
+                },
+                {
+                    "id": 132,
+                    "name": "F-150",
+                    "type": "TRUCK",
+                    "year": 2024
+                },
+                {
+                    "id": 135,
+                    "name": "Mustang",
+                    "type": "COUPE",
+                    "year": 2024
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Honda",
+            "description": "Japanese brand with a strong reputation for practical design and resale value.",
+            "models": [
+                {
+                    "id": 129,
+                    "name": "Accord",
+                    "type": "SEDAN",
+                    "year": 2024
+                },
+                {
+                    "id": 130,
+                    "name": "CR-V",
+                    "type": "SUV",
+                    "year": 2024
+                },
+                {
+                    "id": 128,
+                    "name": "Civic",
+                    "type": "SEDAN",
+                    "year": 2024
+                },
+                {
+                    "id": 131,
+                    "name": "Pilot",
+                    "type": "SUV",
+                    "year": 2023
+                }
+            ]
+        },
+        {
+            "id": 9,
+            "name": "Hyundai",
+            "description": "Korean brand with long warranties and a fast-growing electric range.",
+            "models": [
+                {
+                    "id": 157,
+                    "name": "Elantra",
+                    "type": "SEDAN",
+                    "year": 2024
+                },
+                {
+                    "id": 160,
+                    "name": "Ioniq 5",
+                    "type": "SUV",
+                    "year": 2024
+                },
+                {
+                    "id": 158,
+                    "name": "Sonata",
+                    "type": "SEDAN",
+                    "year": 2024
+                },
+                {
+                    "id": 159,
+                    "name": "Tucson",
+                    "type": "SUV",
+                    "year": 2024
+                }
+            ]
+        },
+        {
+            "id": 10,
+            "name": "Kia",
+            "description": "Korean manufacturer recognised for value, design and warranty coverage.",
+            "models": [
+                {
+                    "id": 164,
+                    "name": "EV6",
+                    "type": "SUV",
+                    "year": 2024
+                },
+                {
+                    "id": 161,
+                    "name": "Forte",
+                    "type": "SEDAN",
+                    "year": 2024
+                },
+                {
+                    "id": 162,
+                    "name": "Sportage",
+                    "type": "SUV",
+                    "year": 2024
+                },
+                {
+                    "id": 163,
+                    "name": "Telluride",
+                    "type": "SUV",
+                    "year": 2023
+                }
+            ]
+        },
+        {
+            "id": 12,
+            "name": "Mercedes-Benz",
+            "description": "German luxury marque with a wide range of sedans, SUVs and EVs.",
+            "models": [
+                {
+                    "id": 169,
+                    "name": "C-Class",
+                    "type": "SEDAN",
+                    "year": 2024
+                },
+                {
+                    "id": 170,
+                    "name": "E-Class",
+                    "type": "SEDAN",
+                    "year": 2023
+                },
+                {
+                    "id": 171,
+                    "name": "GLC",
+                    "type": "SUV",
+                    "year": 2024
+                },
+                {
+                    "id": 172,
+                    "name": "GLE",
+                    "type": "SUV",
+                    "year": 2023
+                }
+            ]
+        },
+        {
+            "id": 8,
+            "name": "Nissan",
+            "description": "Japanese manufacturer with a broad line-up including the electric Leaf.",
+            "models": [
+                {
+                    "id": 153,
+                    "name": "Altima",
+                    "type": "SEDAN",
+                    "year": 2024
+                },
+                {
+                    "id": 156,
+                    "name": "Leaf",
+                    "type": "HATCHBACK",
+                    "year": 2023
+                },
+                {
+                    "id": 155,
+                    "name": "Rogue",
+                    "type": "SUV",
+                    "year": 2024
+                },
+                {
+                    "id": 154,
+                    "name": "Sentra",
+                    "type": "SEDAN",
+                    "year": 2024
+                }
+            ]
+        },
+        {
+            "id": 11,
+            "name": "Subaru",
+            "description": "Japanese brand built around symmetrical all-wheel drive and safety.",
+            "models": [
+                {
+                    "id": 168,
+                    "name": "Crosstrek",
+                    "type": "SUV",
+                    "year": 2023
+                },
+                {
+                    "id": 167,
+                    "name": "Forester",
+                    "type": "SUV",
+                    "year": 2024
+                },
+                {
+                    "id": 165,
+                    "name": "Impreza",
+                    "type": "HATCHBACK",
+                    "year": 2024
+                },
+                {
+                    "id": 166,
+                    "name": "Outback",
+                    "type": "WAGON",
+                    "year": 2024
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "name": "Tesla",
+            "description": "Electric vehicle manufacturer with a software-first approach.",
+            "models": [
+                {
+                    "id": 145,
+                    "name": "Model 3",
+                    "type": "SEDAN",
+                    "year": 2024
+                },
+                {
+                    "id": 147,
+                    "name": "Model S",
+                    "type": "SEDAN",
+                    "year": 2023
+                },
+                {
+                    "id": 148,
+                    "name": "Model X",
+                    "type": "SUV",
+                    "year": 2023
+                },
+                {
+                    "id": 146,
+                    "name": "Model Y",
+                    "type": "SUV",
+                    "year": 2024
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "name": "Toyota",
+            "description": "Japanese manufacturer known for reliable, efficient vehicles and hybrid leadership.",
+            "models": [
+                {
+                    "id": 123,
+                    "name": "Camry",
+                    "type": "SEDAN",
+                    "year": 2024
+                },
+                {
+                    "id": 124,
+                    "name": "Corolla",
+                    "type": "SEDAN",
+                    "year": 2024
+                },
+                {
+                    "id": 126,
+                    "name": "Highlander",
+                    "type": "SUV",
+                    "year": 2023
+                },
+                {
+                    "id": 125,
+                    "name": "RAV4",
+                    "type": "SUV",
+                    "year": 2024
+                },
+                {
+                    "id": 127,
+                    "name": "Tacoma",
+                    "type": "TRUCK",
+                    "year": 2024
+                }
+            ]
+        }
+    ]
+}

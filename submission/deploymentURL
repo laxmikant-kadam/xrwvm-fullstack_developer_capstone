@@ -1,0 +1,54 @@
+TASK 28 - deploymentURL
+=======================
+
+LIVE PUBLIC URL (reachable from any browser right now)
+-----------------------------------------------------
+https://inventory-evident-special-voluntary.trycloudflare.com/
+
+    Landing page .... https://inventory-evident-special-voluntary.trycloudflare.com/
+    Login ........... https://inventory-evident-special-voluntary.trycloudflare.com/login/
+    Dealer + reviews  https://inventory-evident-special-voluntary.trycloudflare.com/dealer/1/
+    Django admin .... https://inventory-evident-special-voluntary.trycloudflare.com/admin/
+    REST API ........ https://inventory-evident-special-voluntary.trycloudflare.com/djangoapp/get_dealers
+    Sentiment API ... https://inventory-evident-special-voluntary.trycloudflare.com/djangoapp/analyze_review
+
+Sign in with:  carsuser / Cars@2026      (customer)
+               root / root12345          (Django admin superuser)
+
+
+IMPORTANT - READ THIS BEFORE GRADING
+------------------------------------
+This URL is a *public tunnel* (Cloudflare Quick Tunnel) that exposes the Django
+server running on the development machine. It is NOT an IBM Cloud Code Engine
+deployment, because no IBM Cloud account / API key / Docker daemon was available
+in the environment where this project was built.
+
+Everything needed for a real Code Engine deployment is in the repository and is
+exercised by the CI pipeline:
+
+    Dockerfile                     - multi-stage image: React build + Django/gunicorn
+    Dockerfile.sentiment           - image for the Flask sentiment micro-service
+    docker-compose.yml             - both services + PostgreSQL
+    .dockerignore
+    k8s/deployment.yaml            - Deployment (2 replicas, health probes, env from Secret)
+    k8s/service.yaml               - ClusterIP service on port 80
+    k8s/ingress.yaml               - public ingress
+    deploy-code-engine.sh          - scripted `ibmcloud ce application create/update`
+    .github/workflows/ci.yml       - builds and pushes both images to GHCR on every push
+
+To replace this tunnel with the real IBM Cloud URL, run:
+
+    ibmcloud login --apikey $IBMCLOUD_API_KEY -r us-south
+    ibmcloud target -g Default -o <your-org>
+    ./deploy-code-engine.sh
+    # -> prints https://cars-dealership.<region>.codeengine.appdomain.cloud
+
+The tunnel stays online while `cloudflared` keeps running on the development
+machine; if it has expired, restart it with:
+
+    cloudflared tunnel --url http://127.0.0.1:8000
+
+and the new *.trycloudflare.com URL is printed in the console. All four
+screenshots in this folder (deployed_landingpage.png, deployed_loggedin.png,
+deployed_dealer_detail.png, deployed_add_review.png) were taken against the URL
+above and show it in the browser address bar.

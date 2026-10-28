@@ -1,0 +1,7 @@
+$ curl -s "http://127.0.0.1:8000/djangoapp/analyze/Fantastic%20services" | python -m json.tool
+
+{
+    "status": 200,
+    "text": "Fantastic services",
+    "sentiment": "positive"
+}

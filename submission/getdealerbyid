@@ -1,0 +1,61 @@
+$ curl -s "http://127.0.0.1:8000/djangoapp/get_dealer/1" | python -m json.tool
+
+{
+    "status": 200,
+    "dealer": {
+        "id": 1,
+        "full_name": "Cars Dealership - Wichita",
+        "short_name": "Wichita",
+        "address": "5150 N Webb Road",
+        "city": "Wichita",
+        "state": "Kansas",
+        "st": "KS",
+        "zip": "67208",
+        "st_zip": "KS 67208",
+        "lat": 37.7234,
+        "long": -97.2425,
+        "latitude": 37.7234,
+        "longitude": -97.2425
+    },
+    "reviews": [
+        {
+            "id": 15,
+            "name": "Elena Rossi",
+            "dealership": 1,
+            "review": "Visited the showroom to compare two SUVs. The staff was polite and the test drive was well organised.",
+            "purchase": false,
+            "purchase_date": "",
+            "car_make": "",
+            "car_model": "",
+            "car_year": null,
+            "sentiment": "positive",
+            "created_at": "2025-03-12T14:30:00+00:00"
+        },
+        {
+            "id": 14,
+            "name": "Marcus Bell",
+            "dealership": 1,
+            "review": "The car is great but the finance office was slow and the paperwork took almost three hours.",
+            "purchase": true,
+            "purchase_date": "2024-09-02",
+            "car_make": "Ford",
+            "car_model": "Escape",
+            "car_year": 2021,
+            "sentiment": "negative",
+            "created_at": "2025-02-04T14:30:00+00:00"
+        },
+        {
+            "id": 13,
+            "name": "Priya Nair",
+            "dealership": 1,
+            "review": "Fantastic services from start to finish. The sales team explained every option and never pushed us into a decision. We drove home in a Certified RAV4 the same afternoon.",
+            "purchase": true,
+            "purchase_date": "2024-11-16",
+            "car_make": "Toyota",
+            "car_model": "RAV4",
+            "car_year": 2022,
+            "sentiment": "positive",
+            "created_at": "2025-01-18T14:30:00+00:00"
+        }
+    ]
+}

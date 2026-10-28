@@ -1,0 +1,16 @@
+$ curl -s -i -c cookies.txt -X POST "http://127.0.0.1:8000/djangoapp/login" -H "Content-Type: application/json" -d '{"userName": "carsuser", "password": "Cars@2026"}'
+
+HTTP/1.1 200 OK
+Date: Wed, 28 Oct 2026 16:17:48 GMT
+Server: WSGIServer/0.2 CPython/3.10.8
+Content-Type: application/json
+X-Frame-Options: DENY
+Vary: Cookie, origin
+Content-Length: 132
+X-Content-Type-Options: nosniff
+Referrer-Policy: same-origin
+Cross-Origin-Opener-Policy: same-origin
+Set-Cookie:  csrftoken=wQVuiHXm5z6MjQ7FslexfUhyY7aEBuZr; expires=Wed, 27 Oct 2027 16:17:48 GMT; Max-Age=31449600; Path=/; SameSite=Lax
+Set-Cookie:  sessionid=535a0i8wsaystji7ohtxzfel9qs9ps1h; expires=Wed, 11 Nov 2026 16:17:48 GMT; HttpOnly; Max-Age=1209600; Path=/; SameSite=Lax
+
+{"userName": "carsuser", "firstName": "Jordan", "lastName": "Ellis", "email": "jordan.ellis@example.com", "status": "Authenticated"}
