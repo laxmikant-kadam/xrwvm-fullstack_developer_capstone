@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Create an account | Cars Dealership</title>
+    <meta name="description" content="Create a Cars Dealership account to post reviews about your local dealership." />
+    <link rel="stylesheet" href="/static/css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a class="brand" href="/">
+          <span class="brand__mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M18.9 6.2A2 2 0 0017 5H7a2 2 0 00-1.9 1.2L3.5 10H2v7h2v-2h16v2h2v-7h-1.5zM6.5 14A1.5 1.5 0 118 12.5 1.5 1.5 0 016.5 14zm11 0a1.5 1.5 0 111.5-1.5 1.5 1.5 0 01-1.5 1.5zM5.6 9l1.2-2.4h10.4L18.4 9z"
+              />
+            </svg>
+          </span>
+          <span class="brand__text">
+            <strong>Cars Dealership</strong>
+            <span>National Car Retailer</span>
+          </span>
+        </a>
+
+        <nav class="nav" aria-label="Main navigation">
+          <a class="nav__link" href="/">Home</a>
+          <a class="nav__link" href="/about/">About Us</a>
+          <a class="nav__link" href="/contact/">Contact Us</a>
+          <div class="nav__auth" data-auth-nav>
+            <a class="btn btn--ghost btn--sm" href="/login/">Login</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="auth-wrap">
+      <aside class="auth-aside">
+        <img src="/static/images/auth-side.jpg" alt="Performance car at a Cars Dealership branch" />
+        <div class="auth-aside__content">
+          <h2>Join 12,000+ happy drivers</h2>
+          <p>
+            Create a free account to review dealerships, save your favourite
+            branches and get notified when new inventory arrives.
+          </p>
+        </div>
+      </aside>
+
+      <section class="auth-panel">
+        <div class="auth-form">
+          <h1>Create your account</h1>
+          <p>It only takes a minute - all fields are required.</p>
+
+          {% if messages %}
+          <div>
+            {% for message in messages %}
+            <div class="alert alert--{% if message.tags == 'error' %}error{% elif message.tags == 'success' %}success{% else %}info{% endif %}">
+              {{ message }}
+            </div>
+            {% endfor %}
+          </div>
+          {% endif %}
+
+          <form method="post" action="/register/">
+            {% csrf_token %}
+            <div class="field">
+              <label for="username">Username</label>
+              <input id="username" name="username" type="text" placeholder="Choose a username" required autofocus />
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="first_name">First name</label>
+                <input id="first_name" name="first_name" type="text" placeholder="Jordan" required />
+              </div>
+              <div class="field">
+                <label for="last_name">Last name</label>
+                <input id="last_name" name="last_name" type="text" placeholder="Ellis" required />
+              </div>
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="you@example.com" required />
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="password">Password</label>
+                <input id="password" name="password" type="password" placeholder="Minimum 6 characters" minlength="6" required />
+              </div>
+              <div class="field">
+                <label for="confirm_password">Confirm password</label>
+                <input id="confirm_password" name="confirm_password" type="password" placeholder="Repeat password" minlength="6" required />
+              </div>
+            </div>
+            <button class="btn btn--primary btn--block" type="submit">Register</button>
+          </form>
+
+          <p class="auth-foot">
+            Already have an account? <a href="/login/">Sign in</a>
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <script src="/static/js/api.js"></script>
+  </body>
+</html>

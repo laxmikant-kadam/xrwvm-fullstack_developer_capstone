@@ -1,0 +1,148 @@
+[
+  {
+    "id": 1,
+    "name": "Toyota",
+    "country": "Japan",
+    "description": "Japanese manufacturer known for reliable, efficient vehicles and hybrid leadership.",
+    "models": [
+      { "name": "Camry", "type": "SEDAN", "year": 2024 },
+      { "name": "Corolla", "type": "SEDAN", "year": 2024 },
+      { "name": "RAV4", "type": "SUV", "year": 2024 },
+      { "name": "Highlander", "type": "SUV", "year": 2023 },
+      { "name": "Tacoma", "type": "TRUCK", "year": 2024 }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Honda",
+    "country": "Japan",
+    "description": "Japanese brand with a strong reputation for practical design and resale value.",
+    "models": [
+      { "name": "Civic", "type": "SEDAN", "year": 2024 },
+      { "name": "Accord", "type": "SEDAN", "year": 2024 },
+      { "name": "CR-V", "type": "SUV", "year": 2024 },
+      { "name": "Pilot", "type": "SUV", "year": 2023 }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Ford",
+    "country": "United States",
+    "description": "American manufacturer famous for trucks, SUVs and the Mustang.",
+    "models": [
+      { "name": "F-150", "type": "TRUCK", "year": 2024 },
+      { "name": "Escape", "type": "SUV", "year": 2024 },
+      { "name": "Explorer", "type": "SUV", "year": 2023 },
+      { "name": "Mustang", "type": "COUPE", "year": 2024 }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "BMW",
+    "country": "Germany",
+    "description": "German premium brand focused on driving dynamics and technology.",
+    "models": [
+      { "name": "3 Series", "type": "SEDAN", "year": 2024 },
+      { "name": "5 Series", "type": "SEDAN", "year": 2024 },
+      { "name": "X3", "type": "SUV", "year": 2024 },
+      { "name": "X5", "type": "SUV", "year": 2023 },
+      { "name": "i4", "type": "SEDAN", "year": 2024 }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Audi",
+    "country": "Germany",
+    "description": "German premium brand known for quattro all-wheel drive and refined interiors.",
+    "models": [
+      { "name": "A4", "type": "SEDAN", "year": 2024 },
+      { "name": "A6", "type": "SEDAN", "year": 2023 },
+      { "name": "Q5", "type": "SUV", "year": 2024 },
+      { "name": "Q7", "type": "SUV", "year": 2023 }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Tesla",
+    "country": "United States",
+    "description": "Electric vehicle manufacturer with a software-first approach.",
+    "models": [
+      { "name": "Model 3", "type": "SEDAN", "year": 2024 },
+      { "name": "Model Y", "type": "SUV", "year": 2024 },
+      { "name": "Model S", "type": "SEDAN", "year": 2023 },
+      { "name": "Model X", "type": "SUV", "year": 2023 }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Chevrolet",
+    "country": "United States",
+    "description": "American brand offering everything from compact cars to full-size trucks.",
+    "models": [
+      { "name": "Malibu", "type": "SEDAN", "year": 2024 },
+      { "name": "Equinox", "type": "SUV", "year": 2024 },
+      { "name": "Silverado", "type": "TRUCK", "year": 2024 },
+      { "name": "Corvette", "type": "COUPE", "year": 2024 }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Nissan",
+    "country": "Japan",
+    "description": "Japanese manufacturer with a broad line-up including the electric Leaf.",
+    "models": [
+      { "name": "Altima", "type": "SEDAN", "year": 2024 },
+      { "name": "Sentra", "type": "SEDAN", "year": 2024 },
+      { "name": "Rogue", "type": "SUV", "year": 2024 },
+      { "name": "Leaf", "type": "HATCHBACK", "year": 2023 }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Hyundai",
+    "country": "South Korea",
+    "description": "Korean brand with long warranties and a fast-growing electric range.",
+    "models": [
+      { "name": "Elantra", "type": "SEDAN", "year": 2024 },
+      { "name": "Sonata", "type": "SEDAN", "year": 2024 },
+      { "name": "Tucson", "type": "SUV", "year": 2024 },
+      { "name": "Ioniq 5", "type": "SUV", "year": 2024 }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Kia",
+    "country": "South Korea",
+    "description": "Korean manufacturer recognised for value, design and warranty coverage.",
+    "models": [
+      { "name": "Forte", "type": "SEDAN", "year": 2024 },
+      { "name": "Sportage", "type": "SUV", "year": 2024 },
+      { "name": "Telluride", "type": "SUV", "year": 2023 },
+      { "name": "EV6", "type": "SUV", "year": 2024 }
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Subaru",
+    "country": "Japan",
+    "description": "Japanese brand built around symmetrical all-wheel drive and safety.",
+    "models": [
+      { "name": "Impreza", "type": "HATCHBACK", "year": 2024 },
+      { "name": "Outback", "type": "WAGON", "year": 2024 },
+      { "name": "Forester", "type": "SUV", "year": 2024 },
+      { "name": "Crosstrek", "type": "SUV", "year": 2023 }
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Mercedes-Benz",
+    "country": "Germany",
+    "description": "German luxury marque with a wide range of sedans, SUVs and EVs.",
+    "models": [
+      { "name": "C-Class", "type": "SEDAN", "year": 2024 },
+      { "name": "E-Class", "type": "SEDAN", "year": 2023 },
+      { "name": "GLC", "type": "SUV", "year": 2024 },
+      { "name": "GLE", "type": "SUV", "year": 2023 }
+    ]
+  }
+]

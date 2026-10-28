@@ -1,0 +1,13 @@
+{
+  "name": "cars-dealership-mongodb-seed",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Seed MongoDB with the Cars Dealership catalogue",
+  "main": "app.js",
+  "scripts": {
+    "seed": "node app.js"
+  },
+  "dependencies": {
+    "mongodb": "^6.10.0"
+  }
+}

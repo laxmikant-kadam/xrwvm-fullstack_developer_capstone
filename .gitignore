@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Django
+db.sqlite3
+db.sqlite3-journal
+staticfiles/
+media/
+
+# Node / React
+node_modules/
+server/frontend/build/
+server/frontend/.env.local
+npm-debug.log*
+
+# Tooling
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Local run artefacts
+logs/
+submission/_tmp/
+cookies.txt
