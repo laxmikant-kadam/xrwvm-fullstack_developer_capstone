@@ -130,7 +130,10 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 LOGIN_URL = "/login/"
 LOGIN_REDIRECT_URL = "/"
-LOGOUT_REDIRECT_URL = "/"
+# Left unset on purpose: Django's LogoutView (used by /admin/logout/) then renders
+# registration/logged_out.html instead of redirecting, so the admin sees the
+# standard "logged out" confirmation page after signing out.
+LOGOUT_REDIRECT_URL = None
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",

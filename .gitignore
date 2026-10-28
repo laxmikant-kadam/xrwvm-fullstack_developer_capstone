@@ -28,3 +28,7 @@ Thumbs.db
 logs/
 submission/_tmp/
 cookies.txt
+
+# Tunnel binaries and local tooling
+tools/cloudflared.exe
+tools/node_modules/

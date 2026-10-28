@@ -1,6 +1,7 @@
-/* React shell styles - the design tokens and component classes mirror
-   server/frontend/static/css/styles.css so both front ends look identical. */
-@import "../../static/css/styles.css";
+/* React shell styles - styles.css is a copy of
+   server/frontend/static/css/styles.css so both front ends look identical.
+   (Create React App only allows imports from inside src/, hence the copy.) */
+@import "./styles.css";
 
 .app-shell {
   min-height: 100vh;
