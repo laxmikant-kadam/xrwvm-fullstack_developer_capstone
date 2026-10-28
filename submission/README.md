@@ -35,7 +35,7 @@ address bar with the endpoint URL is part of every image.
 | 19 | Dealers filtered by state | [`dealersbystate.png`](dealersbystate.png) | `http://127.0.0.1:8000/?state=Kansas` — 3 Kansas dealers |
 | 20 | Dealer detail + reviews | [`dealer_id_reviews.png`](dealer_id_reviews.png) | `http://127.0.0.1:8000/dealer/1/` — reviews + sentiment badges |
 | 21 | Review submission form | [`dealership_review_submission.png`](dealership_review_submission.png) | Form filled in on `http://127.0.0.1:8000/dealer/1/` |
-| 22 | Review added | [`added_review.png`](added_review.png) | Success banner, new review at the top with *Positive sentiment* |
+| 22 | Review added | [`added_review.png`](added_review.png) · [`added_review_confirmation.png`](added_review_confirmation.png) | New review at the top of the list with *Positive sentiment*; the second file shows the “Thank you! Your review was posted with positive sentiment.” banner |
 | 23 | CI/CD output | [`CICD`](CICD) · <https://github.com/laxmikant-kadam/cars-dealership-capstone/actions> | GitHub Actions run: 4/4 jobs green |
 | 24 | Deployment URL | [`deploymentURL`](deploymentURL) | Live public URL (see caveat) |
 | 25 | Deployed landing page | [`deployed_landingpage.png`](deployed_landingpage.png) | Public URL in the address bar |

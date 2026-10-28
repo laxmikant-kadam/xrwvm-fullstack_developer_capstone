@@ -239,6 +239,15 @@ async function main() {
     if (list) window.scrollTo(0, list.getBoundingClientRect().top + window.scrollY - 150);
   });
   await capture(page, pictures.reviewAdded);
+
+  // extra evidence, local run only: the "review submitted" confirmation banner
+  if (MODE === "local") {
+    await page.evaluate(() => {
+      const alert = document.getElementById("review-alert");
+      if (alert) window.scrollTo(0, alert.getBoundingClientRect().top + window.scrollY - 120);
+    });
+    await capture(page, "added_review_confirmation");
+  }
   }
 
   // ------------------------------------------------------------------- admin
